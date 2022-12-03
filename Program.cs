@@ -7,7 +7,8 @@ class App{
     static void Main(string[] args)
     {
 //        Day1 day = new Day1();
-        Day2 day = new Day2();
+//        Day2 day = new Day2();
+        Day3 day = new Day3();
         day.Run();
     }
 
