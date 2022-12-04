@@ -24,8 +24,7 @@ class Day4
             else if(firstElfStart >= secondElfStart && firstElfEnd <= secondElfEnd)
                 sum++;
         }
-
-        Console.WriteLine(sum);
+        Console.WriteLine("Answer Part 1: " + sum);
     }
     void PartTwo(string[] lines)
     {
@@ -53,7 +52,7 @@ class Day4
             else if(secondElfStart <= firstElfEnd && secondElfEnd >= firstElfEnd)       //second overlaps start of first
                 sum++;
         }
-        Console.WriteLine(sum);
+        Console.WriteLine("Answer Part 2: " + sum);
     }
 
 }

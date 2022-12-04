@@ -23,8 +23,7 @@ class Day3
                 pri = pri - ((int)('A'))+27;
             sum += pri;
         }
-
-        Console.WriteLine(sum);
+        Console.WriteLine("Answer Part 1: " + sum);
     }
     void PartTwo(string[] lines)
     {
@@ -39,7 +38,7 @@ class Day3
                 pri = pri - ((int)('A'))+27;
             sum += pri;
         }
-        Console.WriteLine(sum);
+        Console.WriteLine("Answer Part 2: " + sum);
     }
 
     char FindSharedChar(string first, string second)

@@ -1,11 +1,26 @@
 class Day2
 {
+
+    public void Run()
+    {
+        string[] lines = System.IO.File.ReadAllLines("D:\\Programming\\AdventOfCode\\AdventOfCode_2022\\Inputs\\Input_day2.txt");
+        List<int> rounds = new List<int>();
+
+        int endScore = 0;
+        foreach(string line in lines)
+        {
+            string[] hands =  line.Split(" ",2);
+            string yourHand = calculateResponseFromEnd(hands[0],hands[1]);
+            endScore += calculateScore(hands[0], yourHand);
+        }
+        Console.WriteLine(endScore);
+    }
+
     int calculateScore(string opponent, string hand)
     {
         int loss = 0;
         int win = 6;
         int draw = 3;
-
 
         int score = 0;
         if(hand == "X")
@@ -74,24 +89,5 @@ string calculateResponseFromEnd(string opponent, string end)
         }
 
         return hand;
-    }
-
-
-    public void Run()
-    {
-        string[] lines = System.IO.File.ReadAllLines("D:\\Programming\\AdventOfCode\\AdventOfCode_2022\\Inputs\\Input_day2.txt");
-        List<int> rounds = new List<int>();
-
-        int endScore = 0;
-        foreach(string line in lines)
-        {
-            string[] hands =  line.Split(" ",2);
-            string yourHand = calculateResponseFromEnd(hands[0],hands[1]);
-            endScore += calculateScore(hands[0], yourHand);
-
-        }
-
-        
-        Console.WriteLine(endScore);
     }
 }
